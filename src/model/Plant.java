@@ -1,5 +1,7 @@
 package model;
 
+import model.cell.SpaceCell;
+
 public class Plant {
     private int width, height;
     private Cell[][] map;
@@ -11,19 +13,19 @@ public class Plant {
     public Plant(int height, int width) {
         this.width=width;
         this.height=height;
+        map = new Cell[height][width];
     }
 
     public void init() {
 
     }
 
-    public void putCell(int l, int i, Cell cell) {
-        //TODO
+    public void putCell(int l, int c, Cell cell) {
+        map[l][c]=cell;
     }
 
     public Cell getCell(int l, int c) {
-        //TODO GORDO
-        return null;
+        return (l<0 || l>height || c<0 || c>width) ? null : map[l][c];
     }
 
     public int getMoves() {
@@ -36,7 +38,11 @@ public class Plant {
 
 
     public boolean touch(int line, int col) {
-        return false;
+        if(map[line][col] instanceof SpaceCell) return false;
+        ++moves;
+        map[line][col].rotateCell();
+        listener.cellChanged(line,col,map[line][col]);
+        return true;
     }
 
     public void setListener(Listener listener) {

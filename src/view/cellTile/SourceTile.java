@@ -17,7 +17,6 @@ public class SourceTile extends CellTile {
         Console.setBackground(YELLOW);
         setForeground(BROWN);
         Console.print("P");
-        setForeground(BLACK);
-        Console.print("-");
+        paintDash(YELLOW,BLACK);
     }
 }

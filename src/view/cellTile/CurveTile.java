@@ -5,18 +5,18 @@ import model.Cell;
 import view.CellTile;
 
 import static isel.leic.pg.Console.*;
+import static isel.leic.pg.Console.WHITE;
 
-public class HomeTile extends CellTile {
-    public HomeTile(Cell cell) {
+public class CurveTile extends CellTile {
+    public CurveTile(Cell cell) {
         super(cell);
     }
-
     @Override
     public void paint() {
         cursor(1,1);
-        Console.setBackground(RED);
+        Console.setBackground(BLACK);
         setForeground(WHITE);
-        Console.print("H");
+        Console.print("o");
         paintDash(BLACK,WHITE);
     }
 }
