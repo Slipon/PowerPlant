@@ -11,7 +11,7 @@ import view.cellTile.*;
 
 import java.util.List;
 
-import static isel.leic.pg.Console.setForeground;
+import static isel.leic.pg.Console.*;
 
 
 public abstract class CellTile extends Tile {
@@ -25,7 +25,11 @@ public abstract class CellTile extends Tile {
 
     @Override
     public void paint() {
-
+        cursor(1,1);
+        Console.setBackground((cell.isConnected())? YELLOW : BLACK);
+        setForeground((cell.isConnected())? BLACK : WHITE);
+        Console.print('o');
+        paintDash(BLACK,WHITE);
     }
 
     public static Tile newInstance(Cell cell) {
@@ -41,8 +45,8 @@ public abstract class CellTile extends Tile {
         List<Dash> dash = cell.getDashes();
         for(Dash d : dash){
             cursor(1 +d.getDir().deltaLine, 1 +d.getDir().deltaCol);
-            Console.setBackground(background);
-            setForeground(foreground);
+            Console.setBackground(cell.isConnected()? YELLOW : background);
+            setForeground(cell.isConnected()? BLACK : foreground);
             Console.print( (d.getDir() == Dir.UP || d.getDir() == Dir.DOWN) ? "|" : "-");
         }
     }

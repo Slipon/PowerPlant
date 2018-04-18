@@ -14,8 +14,8 @@ public class HomeTile extends CellTile {
     @Override
     public void paint() {
         cursor(1,1);
-        Console.setBackground(RED);
-        setForeground(WHITE);
+        Console.setBackground(cell.isConnected()? YELLOW : RED);
+        setForeground(cell.isConnected()? RED : WHITE);
         Console.print("H");
         paintDash(BLACK,WHITE);
     }

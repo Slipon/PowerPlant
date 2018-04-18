@@ -10,5 +10,11 @@ public class SourceCell extends Cell {
     public SourceCell(int dashes_number){
         this.dashes_number=dashes_number;
         dashes.add(new Dash(Dir.randomDir()));
+        connected=true;
+    }
+
+    @Override
+    public void setConnection(boolean connectedState) {
+        return;
     }
 }

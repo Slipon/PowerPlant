@@ -13,10 +13,6 @@ public enum  Dir {
         deltaCol=dCol;
     }
 
-    public Dir change(){
-        return values()[(this.ordinal()+2)%values().length];
-    }
-
     public Dir nextPos(){
         return values()[(this.ordinal()+1)%values().length];
     }

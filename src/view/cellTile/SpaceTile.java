@@ -8,5 +8,7 @@ public class SpaceTile extends CellTile {
         super(cell);
     }
 
-    //Teste
+    @Override
+    public void paint() {
+    }
 }

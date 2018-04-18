@@ -9,6 +9,7 @@ import java.util.List;
 public abstract class Cell {
     protected static Plant model;
     protected List<Dash> dashes = new ArrayList<>();
+    protected boolean connected =false;
 
     public static Cell newInstance(char type) {
         switch (type){
@@ -39,5 +40,22 @@ public abstract class Cell {
             currentDir = d.getDir();
             d.setDir(currentDir.nextPos());
         }
+    }
+
+    public boolean isConnected(){
+        return connected;
+    }
+
+    public void setConnection(boolean connectedState){
+        connected=connectedState;
+    }
+
+    //Return the list of each cell direction
+    public List<Dir> getDirections(){
+        List<Dir> dirs = new ArrayList<>();
+        for(Dash d : dashes){
+            dirs.add(d.getDir());
+        }
+        return dirs;
     }
 }
