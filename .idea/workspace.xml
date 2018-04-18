@@ -7,16 +7,6 @@
       <change beforePath="$PROJECT_DIR$/out/production/PowerPlant/model/Plant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PowerPlant/model/Plant.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PowerPlant/model/cell/SourceCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PowerPlant/model/cell/SourceCell.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PowerPlant/view/CellTile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PowerPlant/view/CellTile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Dash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Dash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Dir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Dir.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Plant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/cell/SourceCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/cell/SourceCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/CellTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CellTile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/cellTile/BranchTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/cellTile/BranchTile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/cellTile/CurveTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/cellTile/CurveTile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/cellTile/HomeTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/cellTile/HomeTile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/cellTile/LineTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/cellTile/LineTile.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,6 +68,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Levels.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Levels.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="2" selection-start-column="2" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpaceTile.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/view/cellTile/SpaceTile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Dir.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Dir.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -87,7 +95,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ctrl/Game.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="320">
@@ -119,7 +127,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/ctrl/Game.java" />
         <option value="$PROJECT_DIR$/src/model/Cell/SpaceCell.java" />
-        <option value="$PROJECT_DIR$/src/view/cellTile/SpaceTile.java" />
         <option value="$PROJECT_DIR$/src/model/cell/DashCell.java" />
         <option value="$PROJECT_DIR$/src/view/cellTile/BrenchTile.java" />
         <option value="$PROJECT_DIR$/src/model/cell/BrenchCell.java" />
@@ -141,11 +148,12 @@
         <option value="$PROJECT_DIR$/src/view/cellTile/LineTile.java" />
         <option value="$PROJECT_DIR$/src/view/cellTile/CurveTile.java" />
         <option value="$PROJECT_DIR$/src/model/Plant.java" />
+        <option value="$PROJECT_DIR$/src/view/cellTile/SpaceTile.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
+    <option name="x" value="-13" />
     <option name="width" value="1935" />
     <option name="height" value="1050" />
   </component>
@@ -356,12 +364,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523544931849</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="18/04/18&#10;- Full game working&#10;- Missing documentation">
+      <created>1524072707260</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1524072707260</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -373,11 +387,11 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32965517" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32827586" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32827586" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1451823" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1451823" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -398,13 +412,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test" />
     <MESSAGE value="12/04/18&#10;- All pieces Drawn&#10;- All pieces rotate&#10;- Moves incremented" />
-    <option name="LAST_COMMIT_MESSAGE" value="12/04/18&#10;- All pieces Drawn&#10;- All pieces rotate&#10;- Moves incremented" />
+    <MESSAGE value="18/04/18&#10;- Full game working&#10;- Missing documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="18/04/18&#10;- Full game working&#10;- Missing documentation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/model/Plant.java</url>
+          <url />
           <line>113</line>
           <properties />
           <option name="timeStamp" value="26" />
@@ -683,13 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/cellTile/SpaceTile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/cell/SourceCell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -705,13 +713,6 @@
             <element signature="e#356#357#0" expanded="true" />
             <element signature="e#402#403#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Levels.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -802,6 +803,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="142" column="45" lean-forward="true" selection-start-line="142" selection-start-column="45" selection-end-line="142" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Levels.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/cellTile/SpaceTile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
         </state>
       </provider>
     </entry>
