@@ -50,7 +50,9 @@ public abstract class Cell {
         connected=connectedState;
     }
 
-    //Return the list of each cell direction
+    /**
+     * Return the list of each cell's direction
+     */
     public List<Dir> getDirections(){
         List<Dir> dirs = new ArrayList<>();
         for(Dash d : dashes){

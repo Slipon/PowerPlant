@@ -7,7 +7,6 @@ public class Plant {
     private int width, height;
     private Cell[][] map;
     private int moves;
-    private boolean completed;
     private Listener listener;
 
 
@@ -33,6 +32,9 @@ public class Plant {
         return moves;
     }
 
+    /**
+     * Method to check if all the connections are "true", with the exception of SpaceCell
+     */
     public boolean isCompleted() {
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
@@ -43,6 +45,11 @@ public class Plant {
     }
 
 
+    /**
+     * Method to check when a cell is touched/clicked.
+     * Verifies if it's not a SpaceCell.
+     * Case not, increments moves, rotates the cell and re-paint the board.
+     */
     public boolean touch(int line, int col) {
         if(map[line][col] instanceof SpaceCell) return false;
         ++moves;
@@ -52,6 +59,9 @@ public class Plant {
         return true;
     }
 
+    /**
+     * Method to re-paint the board by "checking" all the board cells.
+     */
     private void rePaintBoard() {
         for (int i = 0; i <height; i++) {
             for (int j = 0; j < width; j++) {
@@ -60,6 +70,9 @@ public class Plant {
         }
     }
 
+    /**
+     * Method to check every SourceCell to assign the connection between cells.
+     */
     private void boardRefactor() {
         clearBoard();
         for (int i = 0; i <height; i++) {
@@ -71,22 +84,34 @@ public class Plant {
         }
     }
 
+    /**
+     * Method to assign every cells connection.
+     * For the current cell, if there's a neighbor, checks his connection.
+     * If there's no connection, set 'True'.
+     * The method uses recursivity to check every cell's neighbor
+     */
     private void fillConnections(Cell cell, int line, int col) {
         for(Dir d : cell.getDirections()){
-            Cell neighbour = getNeighbourIfPossible(line,col,d);
-            if (neighbour==null)continue;
-            if(!neighbour.isConnected() && checkConnection(neighbour,d)){
-                neighbour.setConnection(true);
-                fillConnections(neighbour,line+d.deltaLine,col+d.deltaCol);
+            Cell neighbor = getNeighborIfPossible(line,col,d);
+            if (neighbor==null)continue;
+            if(!neighbor.isConnected() && checkConnection(neighbor,d)){
+                neighbor.setConnection(true);
+                fillConnections(neighbor,line+d.deltaLine,col+d.deltaCol);
             }
         }
     }
 
-    private boolean checkConnection(Cell neighbour, Dir currDir) {
-        return neighbour.getDirections().contains(currDir.opposite());
+    /**
+     * Method to check if the current cell's neighbor has the opposite dash orientation
+     */
+    private boolean checkConnection(Cell neighbor, Dir currDir) {
+        return neighbor.getDirections().contains(currDir.opposite());
     }
 
-    private Cell getNeighbourIfPossible(int line, int col, Dir d) {
+    /**
+     * Method to check the available directions for each cell's neighbor
+     */
+    private Cell getNeighborIfPossible(int line, int col, Dir d) {
         line=line+d.deltaLine;
         col=col+d.deltaCol;
         if(line<0 || line>=height || col<0 || col>=width) return null;
@@ -110,6 +135,9 @@ public class Plant {
         return height;
     }
 
+    /**
+     * Method to clear all the connections between cells.
+     */
     private void clearBoard(){
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
